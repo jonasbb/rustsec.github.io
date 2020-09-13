@@ -6,12 +6,9 @@ The [RustSec Advisory Database] is a repository of security advisories filed
 against Rust crates published via <https://crates.io> maintained by the
 [Rust Secure Code Working Group].
 
-[gitter-image]: https://badges.gitter.im/badge.svg
-[gitter-link]: https://gitter.im/RustSec/Lobby
-
 ## RustSec Tools
 
-- [cargo-audit:] Audit `Cargo.lock` files for crates with security vulnerabilities
+- [cargo-audit] - audit `Cargo.lock` files for crates with security vulnerabilities
 
 ## Reporting Vulnerabilities
 
@@ -23,5 +20,5 @@ against the [RustSec Advisory Database].
 </a>
 
 [RustSec Advisory Database]: https://github.com/RustSec/advisory-db
-[Rust Secure Code Working Group]: https://github.com/rust-secure-code/wg
-[cargo-audit:]: https://github.com/RustSec/cargo-audit
+[Rust Secure Code Working Group]: https://www.rust-lang.org/governance/wgs/wg-secure-code
+[cargo-audit]: https://github.com/RustSec/cargo-audit

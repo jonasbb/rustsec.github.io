@@ -17,7 +17,7 @@
   <nav>
     <div>
         {% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>{% endfor %}
-        <a href="https://gitter.im/RustSec/Lobby"><img src="https://badges.gitter.im/badge.svg" alt="Gitter Chat"></a>
+        <a href="https://rust-lang.zulipchat.com/#narrow/stream/146229-wg-secure-code/" alt="Zulip Chat"><img src="https://img.shields.io/badge/zulip-join_chat-blue.svg"></a>
     </div>
     <div>{% for link in site.links %}<a href="{{ link.url }}" title="{{ link.title }}" aria-label="{{ link.title }}">{% include {{ link.icon }} %}</a>{% endfor %}</div>
   </nav>
