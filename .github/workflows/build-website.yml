@@ -1,0 +1,28 @@
+name: Build Website
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [update]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Website
+      run: cargo run -p rustsec-website-gen
+    - name: Commit and Push Changes
+      uses: EndBug/add-and-commit@v6
+      with:
+        add: '.'
+        author_name: Github Action
+        author_email: bascule@gmail.com
+        message: 'Update Website'
+        push: true
+        token: ${{ secrets.GITHUB_TOKEN }}
