@@ -12,6 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        repository: jonasbb/rustsec.github.io
+        ssh-key: ${{ secrets.RUSTSEC_DEPLOYKEY }}
       
     - name: Cache cargo bin
       uses: actions/cache@v1
@@ -35,4 +38,5 @@ jobs:
         author_email: bascule@gmail.com
         message: 'Update Website'
         push: true
+
         token: ${{ secrets.GITHUB_TOKEN }}
