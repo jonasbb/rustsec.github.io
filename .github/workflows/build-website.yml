@@ -16,7 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Website
-      run: cargo run -p rustsec-website-gen
+      run: bundle exec jekyll build
+    - run: "echo `date` >>index.md"
     - name: Commit and Push Changes
       uses: EndBug/add-and-commit@v6
       with:
