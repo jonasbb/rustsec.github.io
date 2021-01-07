@@ -16,7 +16,7 @@ jobs:
       with:
         ruby-version: 2.7
     - name: Build Website
-      run: bundle exec jekyll build
+      run: bundle && bundle exec jekyll build
     - run: "echo `date` >>index.md"
     - name: Commit and Push Changes
       uses: EndBug/add-and-commit@v6
