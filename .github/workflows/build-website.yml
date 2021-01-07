@@ -12,8 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Bundler
-      run: gem install bundler
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
     - name: Build Website
       run: bundle exec jekyll build
     - run: "echo `date` >>index.md"
